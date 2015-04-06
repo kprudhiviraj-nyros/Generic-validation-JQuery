@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  //input on focus
+  //input on focus if the field is empty
   $( "input" ).focus(function() {
       if(this.value.length==0 && this.required==true)
         {
@@ -36,7 +36,7 @@ $(document).ready(function(){
     var mal=$(this).attr("max");
     var tmp= $(this).attr("class");
     var pos=(tmp.indexOf('number'));
-    if($(this).attr("required") && pos>=0)
+    if($(this).attr("required") && pos>=0)//it will consider the min and max lengths of a phone number
     {
       if(mil==null) mil=10;
       if(mal==null) mal=30;
@@ -68,7 +68,7 @@ $(document).ready(function(){
     var l=(this).value.length;
     var ckem=  /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i    ;
     var re=this.required;
-    if(re==true){
+    if(re==true){//taking the values
     if(l==0){$(this).siblings("p").hide();$(this).parent().append("<p>Email Cannot be blank!</p>");} 
       else if(l>0 && ckem.test(this.value)==false){$(this).siblings("p").hide();$(this).parent().append("<p>Doesnt look like a email!</p>");} 
         else if(ckem.test(this.value)==true){$(this).siblings("p").hide();$(this).parent().append("<p>ok</p>");}
@@ -86,7 +86,7 @@ $(document).ready(function(){
     $("input:password:last").keyup(function(){
       var p= (this).value.length;
           var result= $(this).parent().parent().find('input:password:first').val();
-            var ckpd =  /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+            var ckpd =  /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;//here the checking of password will takes place
           var n=result.indexOf(this.value);
           if(p==0){$(this).siblings("p").hide();$(this).parent().append("<p>Password should be confirmed!</p>");}
           else if(n==-1){$(this).siblings("p").hide();$(this).parent().append("<p>Password Didnt match</p>");}
@@ -105,10 +105,10 @@ function validate(){
         var flag=1;var respd;
         var rb=0,rn=0,rc=0,cb=0,cc=0,cn=0;
         $(this).removeClass("animate");
-        var cknum= /^[0-9]{1,30}$/
-        var ckfn = /^[A-Za-z0-9]{1,30}$/
-        var ckem=  /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i    
-        var ckpd =  /^[A-Za-z0-9!@#$%^&*()_]{1,20}$/
+        var cknum= /^[0-9]{1,30}$///checking number
+        var ckfn = /^[A-Za-z0-9]{1,30}$///checking name
+        var ckem=  /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i //checking email   
+        var ckpd =  /^[A-Za-z0-9!@#$%^&*()_]{1,20}$///checking password
         var ckun= /^[A-Za-z0-9]{6,20}/;
         $("input,select,textarea").each(function(){
             
@@ -137,11 +137,11 @@ function validate(){
           }
           else if(this.type=="email" && this.required==true){
                   var p=this.value;
-                  var l=p.length;
+                  var l=p.length;//email verification takes place
                   if(l==0){this.focus();flag=0;return false;}
                   else if(l>0 && ckem.test(p)==false){this.focus();flag=0;return false;}
                 }
-          else if(this.type=="password" && $(this).attr("class")=="confirm" ){
+          else if(this.type=="password" && $(this).attr("class")=="confirm" ){  //password confirmation
                         if(this.value.length<respd.length){this.focus();flag=0;return false;}
                         if(this.value.length==respd.length && this.value!=respd){this.focus();flag=0;return false;}
                 }
@@ -176,7 +176,7 @@ function validate(){
                 }            
         });
         if(flag==0)return false;
-        else if(flag==1){alert("Registration success");return true;}
+        else if(flag==1){alert("Registration success");return true;}//when the submit button clicks it will show alert box with sucess and reset will be done  
     }
 //end of validate function
 
