@@ -1,0 +1,79 @@
+<!doctype HTML>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+</head>
+<body>
+	<header>
+		            <h2>FACULTY REGISTRATION</h2>
+	</header><br><br>
+
+        <div class="container">
+		    <div class="content">
+							<form validate>
+								<div>
+									<label>Full Name</label>
+									<input type="text" id= "Fullname" name= "Fullname"  placeholder="Full Name" required="true" max="10" min="5">
+							    </div>
+								<div>
+									<label>User Name</label>
+									<input type="text"  id= "User name" name= "User name" placeholder="User Name" required="true">
+								</div>
+								<div>
+									<label>Email</label>
+									<input type="email" id="email" name="email" placeholder="email" required="true">
+								</div>
+								<div>
+									<label>Contact Number</label>
+									<input type="text" id= "mobile number"name= "mobile number" placeholder="Full Name"  class="number" max="10" required="true">
+								</div>
+								<div>
+									<label>Password</label>
+									<input id="password" name="password" type="password" placeholder="Password" min="6" max="10">
+								</div>
+								<div>
+									<label>Confirm Password</label>
+									<input id= "confirm" name= "confirm" type="password" placeholder="Password"  class="confirm">
+								</div>
+								<div>
+									<span>Gender</span>
+									<input type="radio" id="sex"  name="sex" value=""><span style="color:#8B795E">Male</span>
+									<input type="radio" id="sex" name="sex" value=""><span style="color:#8B795E"> Female</span>
+								</div>
+								<br>
+								<div>
+									<span>Location</span>
+									<select name="area">
+										<option value="">Select your area</option>
+										<option value="vjy">vijayawada</option>
+										<option value="rjy">Rajahmandry</option>
+										<option value="kkd">kakinada</option>
+										<option value="vskp">visakhapatnam</option>
+									</select>
+								</div>
+									<br>
+								<div>
+									<span>Areas of interest</span>
+									<input type="checkbox" value="none"><p>Teaching</p></input>
+									<input type="checkbox" value="none"><p>Administrative</p></input>
+									<input type="checkbox" value="none"><p>P.E.T</p></input>
+
+								</div>
+								<br>
+								<div>
+									<span>Marital status</span>
+									<input type="radio" name="marital" id="marital" value=""> <span style="color:#8B795E">Single</span>
+									<input type="radio"  name="marital" id="marital" value=""><span style="color:#8B795E">Married</span>
+								</div>
+								    <br>
+
+							<button type="submit">SUBMIT</button><br><br><br>
+							</form>
+	        </div>
+        </div>
+    </body>
+</html>

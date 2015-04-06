@@ -1,0 +1,66 @@
+body{
+margin:0px auto;
+background:#EEDFCC;	
+}
+header{
+height:50px;
+width:100%;
+margin:0px;
+background-color: #EEEED1;
+text-align: center;
+color:#8B7E66;
+padding-top: 10px;
+}	
+.content
+{
+width:480px;
+margin-left:500px;
+border:5px solid #8B7765;
+background-color: white;
+}
+input[type="text"]{
+width:50%;
+height:30px;
+margin:10px;
+	}
+input[type="email"]{
+height:30px;
+width:50%;
+margin:10px;
+}
+input[type="password"]{
+width:50%;
+height:30px;
+margin:10px;
+}
+input[type="submit"]{
+width:50%;
+height:30px;
+margin:10px;
+}
+
+label{
+margin: 0px 10px; 
+display:block !important;
+font-weight: bold;
+color:#8B795E;
+}
+p{
+display:inline;
+color:#8B795E;
+}
+span{
+font-weight: bold;
+margin:20px 10px;
+color:#8B795E;
+}
+select{
+color:#8B795E;
+}
+button{
+width:50%;
+height:30px;
+margin:0px 10px;
+background-color: #CDAF95	;
+border-radius: 10px;
+}
